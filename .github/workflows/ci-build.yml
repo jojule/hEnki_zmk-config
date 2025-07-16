@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ZMK_VERSION: ${{ secrets.ZMK_VERSION }}
-      ZEPHYR_SDK_INSTALL_DIR: ${{ runner.tool_cache }}/zephyr-sdk
+      ZEPHYR_SDK_INSTALL_DIR: $HOME/.cache/zephyr-sdk
       ZEPHYR_TOOLCHAIN_VARIANT: zephyr
     steps:
       - name: Checkout code
@@ -26,6 +26,7 @@ jobs:
             ~/.cache/pip
             ~/.west
             build/
+            $HOME/.cache/zephyr-sdk
           key: ${{ runner.os }}-zmk-${{ hashFiles('manifest.yml','**/CMakeLists.txt') }}
 
       - name: Setup Python
