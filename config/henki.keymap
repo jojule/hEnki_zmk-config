@@ -100,6 +100,27 @@
                 };
         };
 
+        /* Mouse key support: pointing device and default motion/scroll parameters */
+        pointing_motion_settings: pointing_motion_settings {
+            compatible = "zmk,pointing-motion";
+            /* Adjust these parameters as needed for cursor speed and acceleration */
+            motion-interval-us = <10000>;
+            motion-boundary = <4>;
+            motion-spinup-ms = <0>;
+        };
+
+        pointing_scroll_settings: pointing_scroll_settings {
+            compatible = "zmk,pointing-scroll";
+            /* Adjust these parameters as needed for scroll speed and acceleration */
+            scroll-interval-us = <10000>;
+            scroll-boundary = <4>;
+            scroll-spinup-ms = <0>;
+        };
+
+        pointing_device: pointing_device {
+            compatible = "zmk,behavior-pointing-device";
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
