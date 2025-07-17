@@ -11,20 +11,6 @@
 
 #include <dt-bindings/zmk/pointing.h>
 
-#undef MOVE_UP 
-#undef MOVE_DOWN 
-#undef MOVE_LEFT 
-#undef MOVE_RIGHT 
-#define MOVE_UP MOVE_VERT(-6000)
-#define MOVE_DOWN MOVE_VERT(6000)
-#define MOVE_LEFT MOVE_HOR(-6000)
-#define MOVE_RIGHT MOVE_HOR(6000)
-
-#undef SCROLL_UP 
-#undef SCROLL_DOWN
-#define SCROLL_UP SCROLL_VERT(40)
-#define SCROLL_DOWN SCROLL_VERT(-40)
-
 #define NAV_LAYER 1
 #define SYM_LAYER 2
 #define SYSTEM_LAYER 3
