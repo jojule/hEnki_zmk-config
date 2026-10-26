@@ -67,5 +67,12 @@ hardware check.
 - `build.yaml`: board and shield targets used by the local build and the
   standard `.github/workflows/build.yml` workflow.
 
-The separate legacy `.github/workflows/ci-build.yml` workflow uses older
-initialization and board settings; it is not the build path documented here.
+## GitHub Actions
+
+`.github/workflows/build.yml` runs the official ZMK build workflow on pushes,
+pull requests, and manual runs. It uses `build.yaml` to build both halves and
+uploads the resulting UF2 files in the `firmware` artifact. Download that
+artifact from the completed run's summary in the repository's Actions tab.
+
+This is the repository's only CI build workflow. Firmware is distributed as
+an Actions artifact; the workflow does not create GitHub Releases.
